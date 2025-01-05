@@ -1,4 +1,4 @@
-# GFER
+# Grupo Fundamental e Espaços de Recobrimento (Elon Lages Lima)
 
 Não encontrei a versão digital dessa edição do livro em lugar nenhum da internet, então
 como não tenho scanner, estou transcrevendo o livro. Formatando aos poucos para deixar 
