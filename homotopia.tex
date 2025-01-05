@@ -1,0 +1,75 @@
+\chapter{Homotopia}
+
+\textbf{Em todo este livro, o símbolo $I$ signfiica o intervalo
+compacto $[0,1]$}.
+
+Neste capítulo serão introduzidas noções básicas sobre homotopia, as
+quais vão ser utilizadas em todo o livro. Homotopia é, na realidade, a
+idéia mais importante da Topologia Algébrica e o grupo fundamental,
+que estudaremos aqui, é provavelmente o invariante algébrico mais
+simples associado a essa idéia. O grupo fundamnetal será apresentado
+no capítulo seguinte. Neste, trataremos de fatos gerais a respeito da
+homotopia, procurando ilustrá-los com aplicações e exemplos
+elementares, mostrando, em particular, a estreita relação entre
+homotopia e o problema de estender continuamente a todo o espaço uma
+aplicação contínua definida num subconjunto fechado desse espaço.
+
+\section{Aplicações homotópicas}
+
+Sejam $X$, $Y$ espaços topológicos. Duas aplicações coninuas $f, g
+\colon X \to Y$ dizem-se \textit{homotópicas} quando existe uma
+aplicação contínua
+
+\begin{equation*}
+	H \colon X \times I \to Y
+\end{equation*}
+
+tal que $H(x, 0) = f(x)$ e $H(x, 1) = g(x)$ para todo $x \in X$. A
+aplicação $H$ chama-se então uma \textit{homotopia} entre $f$ e $g$.
+Escreve-se, neste caso, $H \colon f \simeq g$, ou simplesmente $f
+\simeq g$.
+
+Dada a homotopia $H \colon f \simeq g$, consideremos, para cada $t \in
+I$, a aplicação contínua $H_{t} \colon X \to Y$, definida por
+$H_t(x) = H(x, t)$. Dar a homotopia $H$ equivale a definir uma
+``família contínua a um parâmetro'' $(H_t)_{t \in I}$ de aplicações
+de $X$ em $Y$. A ``continuidade'' da família significa, neste caso,
+que $(x, t) \mapsto H_t(x)$ é um aplicação contínua. Temos $H_0 = f$
+e $H_1 = g$, de modo que a família $(H_t)_{t \in I}$ começa com $f$ e
+termina com $g$.
+
+Intuitivamente, o parâmetro $t$ pode ser imaginado como sendo o tempo.
+A homotopia é então pensada com um processo de deformação coninua da
+aplicação $f$. Tal deformação tem lugar durante uma unidade de tempo.
+No instante $t=0$ temos $f$; para $t=1$ temos g. Nos instantes
+intermediários, $0<t<1$, as aplicaoes $H_t$ fornecem os estágios
+intermediários da deformação.
+
+\textbf{Observação.} Podemos considerar o espaço topológico $C(X;Y)$,
+formado pelas aplicações contínuas de $X$ em $Y$, com a topologia
+compacto-aberta. (No caso de $Y$ ser metrizável, esta é a topologia da
+convergência uniforme nas partes compactas de $X$.) A cada aplicação
+$H \colon X \times I \to Y$ corresponde um caminho em $C(X;Y)$, isto
+é, uma aplicação $\widetilde{H} \colon I \to C(X;Y)$ definida por
+$\widetilde{H}(t) = H_t, H_t(x) = H(t,x)$. Quando $X$ é um espaço de
+Hausdorff localmente compacto, ou é metrizável, então $H$ é contínua
+se, e somente se $\widetilde{H}$ o for. Assim, para $X$ metrizável ou
+localmente compacto de Hausdorff, existe uma bijeção natural entre as
+homotopias $H \colon X \times I \to Y$ e os caminhos $\widetilde{H}
+\colon I \to C(X;Y)$. Se $H$ é uma homotopia entre $f$ e $g$ então o
+caminho $\widetilde{H}$ começa em $f,g \colon X \to Y$, com $X$
+localmente compacto de Hausdorff ou metrizável são homotópicas se, e
+somente se, $f$ e $g$ pertencem à mesma componente conexa por caminhos 
+no espaço $C(X;Y)$. Para a topologia compacto-aberta, ver Bredon[1],
+página 437.
+
+\textbf{Exemplo 1.} Duas aplicações constantes $f, g \colon X \to Y,
+f(x) = p, g(x) = q$, são homotópicas se, e somente se, $p$ e $q$
+pertencem à mesma componente conexa por caminhos do espaço $Y$. Com
+efeito, se existe um caminho $a \colon I \to Y$ com $a(0) = p$ e $a(1)
+= q$, definimos uma homotopia $H \colon X \times I \to Y$ entre $f$ e
+$g$ pondo $H(x, t) = a(t)$, para todo $(x, t) \in X \times I$.
+Reciprocamente, se $H$ é uma homotopia entre as aplicações constantes
+$f(x) = p$ e $g(x) = q$, fixando arbitrariamente $x_0 \in X$,
+obteremos um caminho $a \colon I \in Y$ ligando $p$ a $q$ pondo $a(t)
+= H(x_0, t)$.

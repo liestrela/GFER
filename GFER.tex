@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt,oneside]{book}
+
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{adjustbox}
+\usepackage{hyphenat}
+\usepackage{pdfpages}
+
+\hyphenation{mate-mática recu-perar}
+
+\let\oldquote\quote
+\let\endoldquote\endquote
+\renewenvironment{quote}[2][]
+  {\if\relax\detokenize{#1}\relax
+     \def\quoteauthor{#2}%
+   \else
+     \def\quoteauthor{#2~---~#1}%
+   \fi
+   \oldquote}
+  {\par\nobreak\smallskip\hfill\quoteauthor%
+   \endoldquote\addvspace{\bigskipamount}}
+
+\title{Grupo Fundamental e Espaços de Recobrimento}
+\author{Elon Lages Lima}
+\date{Projeto Euclides, 2006}
+
+\begin{document}
+
+\maketitle
+
+\include{prefacio.tex}
+
+\tableofcontents
+
+\include{gf.tex} % P1 - Grupo Fundamental
+\include{homotopia.tex} % C1 - Homotopia
+
+\end{document}
